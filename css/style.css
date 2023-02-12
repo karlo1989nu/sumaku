@@ -6,7 +6,6 @@ nav{
     align-items: center;
     padding: var(--spacing-3) 0;
     margin-bottom: 40px; 
-    float: right;
     margin: 20px 20px;
 
 }
@@ -27,8 +26,6 @@ body{
     height: auto;
     border-radius: 15%;
     border: 2px solid #8A8CA1;
-    float: left;
-
 }
 #navigation{
     margin-left: auto;
@@ -169,38 +166,28 @@ div{
 }
 
 #bogi-left{
-    float: left;
     margin:  10px;
     width: 50%;
     height: auto;
 }
 
 #bogi-right {
-    float: right;
     margin: 10px;
     width: 50%;
     height: auto;
 }
 
-#contact {
-    display: inline;
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     margin: auto;
     
 }
 
-#form {
-    float: left;
-    margin:  10px;
-    width: 50%;
-    height: auto;
-}
-
-#gmap {
-    float: right;
-    margin: 10px;
-    width: 50%;
-    height: auto;
+.nav_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .bogi-content-grid {
@@ -214,7 +201,33 @@ div{
     grid-template-rows: 1fr 1fr;
 }
 
+/* Formulaire grid */
 
+.contact_form {
+    display: grid;
+    grid-template-areas: 
+    "form_fn form_fn form_ln form_ln"
+    "form_email form_email form_phone form_phone"
+    "form_text form_text form_text form_text"
+    "form_text form_text form_text form_text"
+    ;
+}
+
+.form_fn {
+    grid-area: form_fn;
+}
+.form_ln {
+    grid-area: form_ln;
+}
+.form_email {
+    grid-area: form_email;
+}
+.form_phone {
+    grid-area: form_phone;
+}
+.form_text {
+    grid-area: form_text;
+}
 
 @media only screen and (max-width: 760px){
     body{
@@ -227,7 +240,7 @@ div{
     }
     #logo{
         margin-bottom: auto;
-        float: center;
+
 
     }
     nav{
@@ -250,8 +263,6 @@ div{
     }
     #logo{
         margin-bottom: auto;
-        float: center;
-
     }
     .about-me-container {
         flex-direction: column;
@@ -317,7 +328,6 @@ div{
     .navigation-items{
         margin: auto;
         flex-direction: column;
-        float: center;
     }
     #projects img {
         max-width: 100%;
