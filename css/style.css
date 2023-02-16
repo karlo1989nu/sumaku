@@ -4,7 +4,6 @@
 }
 body{
     font-family: 'Bungee Hairline', cursive;
-    margin: 15px 15px;
     flex-direction: column;
     background-color: #542F54;
     color: #D8EDCC;
@@ -32,6 +31,7 @@ nav{
 
 .navigation{
     margin-left: auto;
+    width: 100%;
     
 }
 
@@ -95,9 +95,10 @@ a:hover {
     height: 100%;
 }
 .am_photos {
-    margin-top: 1rem;
+    margin: 1rem;
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 div{
@@ -135,7 +136,6 @@ div{
     justify-content: center;
     max-width: 100%;
     height: auto;
-    
 }
 
 .skillss div{
@@ -173,14 +173,6 @@ div{
     height: auto;
 }
 
-.contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    margin: auto;
-    
-}
-
 .nav_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -197,7 +189,34 @@ div{
     grid-template-rows: 1fr 1fr;
 }
 
-/* Formulaire grid */
+/* Carousel CSS */
+
+.crr_but {
+    background-color: #542F54;
+    color: #D8EDCC;
+}
+
+.crr_but:hover {
+    background-color: #D8EDCC;
+    color: #542F54;
+    font-weight: bold;
+}
+
+.crr_txt {
+    color: #542F54;
+    font-weight: bold;
+}
+
+/* Formulaire grid contact page */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: auto;
+    gap: 2rem;
+    
+}
 
 .contact_form {
     display: grid;
@@ -207,6 +226,7 @@ div{
     "form_text form_text"
     "form_text form_text"
     ;
+    gap: 2rem;
 }
 
 .form_fn {
@@ -226,28 +246,13 @@ div{
 .form_text {
     grid-area: form_text;
 }
+iframe {
+    width: 100%;
+    margin: auto;
+}
 
 @media (max-width: 768px){
-    body{
-        display: flex;
-        flex-direction: column;
-        margin: 0 20px;
-        align-items: center;
-        text-align: center;
-        padding: auto;
-    }
-    #logo{
-        margin-bottom: auto;
 
-
-    }
-    nav{
-        flex-direction: column; 
-    }
-    .navigation-item{
-        margin: 0 30px;
-        flex-direction: column;
-    }
 }
 
 @media (max-width: 860px){
