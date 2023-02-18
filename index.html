@@ -15,57 +15,69 @@
 </head>
 
 <body>
-    <div class="nav_grid container-fluid">
-        <div>
-            <a href="./index.html"><img class='logo' src="../images/SUMAKU.1.jpg" alt="logo"></a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav_hamb">
+        <div class="container-fluid">
+            <a href="../index.html"><img class='navbar-brand logo' src="../images/SUMAKU.1.jpg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Sumaku</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./bogi.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Who are we?
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./pages/bogi.html">BoGi</a></li>
+                            <li><a class="dropdown-item" href="./pages/suri.html">Suri</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./pages/mao.html">Mao</a></li>
+                            <li><a class="dropdown-item" href="./pages/kuki.html">Kuki</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-        <nav class='navigation container'>
-            <ul class='navigation-items'>
-                <li class='navigation-item'>
-                    <a href='../index.html'>Home</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/bogi.html'>BoGi</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/suri.html'>Suri</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/mao.html'>Mao</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/kuki.html'>Kuki</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/contact.html'>Contact</a>
-                </li>
-            </ul>
-        </nav>
+    </nav>
     </div>
     <main>
         <hr>
-        <h1>SUMAKU</h1>
-        <section class='about-me container'>
-            <div class="am_pic">
-                <img src="./images/SUMAKU.1.jpg" atl="SUMAKU" class='portrait'>
+        <h1 class="text-center">SUMAKU</h1>
+        <br>
+        <div class='container-fluid am_container'>
+            <div class="am_pic col-xl-6 col-sm-12">
+                <img src="./images/SUMAKU.1.jpg" atl="SUMAKU" class="img-fluid">
             </div>
-            <div class="am_txt">
-                <div>
-                    <h2>About us</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta blanditiis fuga
-                        aliquid, expedita sint quas quis itaque, dolore ipsa accusamus eaque repellat neque nesciunt
-                        nobis quae vel, corporis delectus?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta blanditiis fuga
-                        aliquid, expedita sint quas quis itaque, dolore ipsa accusamus eaque repellat neque nesciunt
-                        nobis quae vel, corporis delectus?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta blanditiis fuga
-                        aliquid, expedita sint quas quis itaque, dolore ipsa accusamus eaque repellat neque nesciunt
-                        nobis quae vel, corporis delectus?
-                    </p>
-                </div>
+            <div class="am_txt col-xl-6 col-sm-12">
+                <h2>About us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta blanditiis fuga
+                    aliquid, expedita sint quas quis itaque, dolore ipsa accusamus eaque repellat neque nesciunt
+                    nobis quae vel, corporis delectus?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta blanditiis fuga
+                    aliquid, expedita sint quas quis itaque, dolore ipsa accusamus eaque repellat neque nesciunt
+                    nobis quae vel, corporis delectus?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta blanditiis fuga
+                    aliquid, expedita sint quas quis itaque, dolore ipsa accusamus eaque repellat neque nesciunt
+                    nobis quae vel, corporis delectus?
+                </p>
             </div>
-        </section>
+        </div>
     </main>
     <div class="am_photos container">
         <img class='picture-home' src="./images/SUMAKU.1.jpg" alt="image1">
@@ -78,13 +90,13 @@
     <hr>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="container-fluid carousel-item active">
                 <img src="./images/catnip1.jpg" class="bd-placeholder-img" width="100%" height="350px"
                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
                     focusable="false">
@@ -93,42 +105,46 @@
                     <div class="carousel-caption text-start">
                         <h2 class="fw-bold">BoGi's special Catnip.</h2>
                         <br>
-                        <p class="fw-bold">BoGi's special today in discount, -0.01%, don't ask for more because BoGi doesn't like
+                        <p class="fw-bold">BoGi's special today in discount, -0.01%, don't ask for more because BoGi
+                            doesn't like
                             discounts!</p>
-                            <br>
-                            <br>
-                            <br>
+                        <br>
+                        <br>
+                        <br>
                         <p><a class="btn btn-lg btn-primary crr_but" href="./pages/bogi.html">Buy now!</a></p>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="./images/cutecat.jpg" class="bd-placeholder-img" width="100%" height="350px" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
+            <div class="container-fluid carousel-item">
+                <img src="./images/cutecat.jpg" class="bd-placeholder-img" width="100%" height="350px"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                    focusable="false">
+                <rect width="100%" height="100%" fill="#777" />
                 <div class="container">
                     <div class="carousel-caption">
                         <h2 class="fw-bold">Beauty Suri's kiss</h2>
                         <p>Is your cat feeling lonely? Buy him\her a Beauty Suri's kiss! No guarantee the model will
                             match the one in the picture.</p>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                         <p><a class="btn btn-lg btn-primary crr_but" href="./pages/suri.html">Feel the kiss now!</a></p>
                     </div>
                 </div>
             </div>
             <div class="container-fluid carousel-item">
-                <img src="./images/fat_cat.jpg" class="bd-placeholder-img" width="100%" height="350px" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777" />
+                <img src="./images/fat_cat.jpg" class="bd-placeholder-img" width="100%" height="350px"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+                    focusable="false">
+                <rect width="100%" height="100%" fill="#777" />
                 <div>
                     <div class="carousel-caption">
                         <h2 class="text-end fw-bold">Kuki's loosing weight program.</h2>
                         <br>
-                        <p class="container text-end fw-bold text-wrap fw-bold" style="width:20rem">Don't get confused by the model in the picture, he's not fat, he's well equiped.</p>
+                        <p class="container text-end fw-bold text-wrap fw-bold" style="width:20rem">Don't get confused
+                            by the model in the picture, he's not fat, he's well equiped.</p>
                         <br>
                         <br>
                         <br>

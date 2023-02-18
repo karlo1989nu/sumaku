@@ -14,39 +14,52 @@
 </head>
 
 <body class="container-fluid">
-    <div class="nav_grid">
-        <div>
-            <a href="../index.html"><img class='logo' src="../images/SUMAKU.1.jpg" alt="logo"></a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav_hamb">
+        <div class="container-fluid">
+            <a href="../index.html"><img class='navbar-brand logo' src="../images/SUMAKU.1.jpg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Sumaku</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./bogi.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Who are we?
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./bogi.html">BoGi</a></li>
+                            <li><a class="dropdown-item" href="./suri.html">Suri</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./mao.html">Mao</a></li>
+                            <li><a class="dropdown-item" href="./kuki.html">Kuki</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-        <nav class='navigation'>
-            <ul class='navigation-items'>
-                <li class='navigation-item'>
-                    <a href='../index.html'>Home</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/bogi.html'>BoGi</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/suri.html'>Suri</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/mao.html'>Mao</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/kuki.html'>Kuki</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/contact.html'>Contact</a>
-                </li>
-            </ul>
-        </nav>
+    </nav>
     </div>
     <main>
         <hr>
         <h1>BoGi</h1>
         <section>
             <div class="bogi-content">
-                <div id="bogi-left">
+                <div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta blanditiis fuga
                         aliquid, expedita sint quas quis itaque, dolore ipsa accusamus eaque repellat neque nesciunt
@@ -65,7 +78,7 @@
 
             </div>
             <div class="bogi-content">
-                <div id="bogi-left">
+                <div>
                     <img class='picture-home' src="../images/SUMAKU.1.jpg" alt="image1">
                     <img class='picture-home' src="../images/sumaku.2.webp" alt="image2">
                     <img class='picture-home' src="../images/sumaku.3.webp" alt="image3">
@@ -81,8 +94,8 @@
                     veritatis minus.
                 </p>
             </div>
-            <div class="bogi-content">
-                <div id="bogi-left">
+            <div>
+                <div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta blanditiis fuga
                         aliquid, expedita sint quas quis itaque, dolore ipsa accusamus eaque repellat neque nesciunt
@@ -120,6 +133,7 @@
             </div>
         </section>
     </main>
+    <hr>
     <footer>
         <p>Rights reserved.</p>
     </footer>

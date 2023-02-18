@@ -14,32 +14,45 @@
 </head>
 
 <body class="container-fluid">
-    <div class="nav_grid container-fluid">
-        <div>
-            <a href="../index.html"><img class='logo' src="../images/SUMAKU.1.jpg" alt="logo"></a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav_hamb">
+        <div class="container-fluid">
+            <a href="../index.html"><img class='navbar-brand logo' src="../images/SUMAKU.1.jpg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Sumaku</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./bogi.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Who are we?
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./bogi.html">BoGi</a></li>
+                            <li><a class="dropdown-item" href="./suri.html">Suri</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./mao.html">Mao</a></li>
+                            <li><a class="dropdown-item" href="./kuki.html">Kuki</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-        <nav class='navigation'>
-            <ul class='navigation-items'>
-                <li class='navigation-item'>
-                    <a href='../index.html'>Home</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/bogi.html'>BoGi</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/suri.html'>Suri</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/mao.html'>Mao</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/kuki.html'>Kuki</a>
-                </li>
-                <li class='navigation-item'>
-                    <a href='../pages/contact.html'>Contact</a>
-                </li>
-            </ul>
-        </nav>
+    </nav>
     </div>
     <div>
         <hr>
@@ -69,11 +82,11 @@
                     </div>
                 </form>
             </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d258002.7741430011!2d-79.66604262516672!3d8.959918699416171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fac99d32c9d1cd1%3A0xb475a52535c71ad0!2sLa%20Chorrera!5e0!3m2!1sen!2spa!4v1673574338774!5m2!1sen!2spa"
-                    width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>  
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d258002.7741430011!2d-79.66604262516672!3d8.959918699416171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fac99d32c9d1cd1%3A0xb475a52535c71ad0!2sLa%20Chorrera!5e0!3m2!1sen!2spa!4v1673574338774!5m2!1sen!2spa"
+                width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
     </div>
     <hr>
