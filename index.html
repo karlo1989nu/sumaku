@@ -15,15 +15,15 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary nav_hamb">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid nav_hamb">
             <a href="../index.html"><img class='navbar-brand logo' src="../images/SUMAKU.1.jpg" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse nav_hamb" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../index.html">Sumaku</a>
@@ -33,7 +33,7 @@
                             aria-expanded="false">
                             Who are we?
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu nav_hamb">
                             <li><a class="dropdown-item" href="./pages/bogi.html">BoGi</a></li>
                             <li><a class="dropdown-item" href="./pages/suri.html">Suri</a></li>
                             <li>
@@ -44,17 +44,17 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link" href="./pages/contact.html">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2 nav_hamb.srch nav_hamb.srch" type="search" placeholder="Search"
+                        aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
-    </div>
     <main>
         <hr>
         <h1 class="text-center">SUMAKU</h1>
@@ -165,9 +165,6 @@
     </div>
     <hr>
     <div>
-        <div id="up">
-            <a href="#logo">UP</a>
-        </div>
         <footer>
             <p>Rights reserved.</p>
         </footer>
