@@ -11,11 +11,6 @@ body {
     font-weight: bold;
 }
 
-nav {
-    background-color: #542F54;
-    color: #D8EDCC;
-}
-
 .nav_hamb {
     background-color: #542F54;
     color: #D8EDCC;
@@ -73,13 +68,10 @@ img {
 li {
     display: list-item;
     text-align: center;
+    color: #D8EDCC;
 }
 
-a {
-    color: #88A17A;
-    text-decoration: none;
-    border-radius: 15%;
-}
+
 
 a:hover {
     color: #8A8CA1;
