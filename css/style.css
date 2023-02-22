@@ -11,6 +11,10 @@ body {
     font-weight: bold;
 }
 
+.letter_color {
+    color: #D8EDCC;
+}
+
 .nav_hamb {
     background-color: #542F54;
     color: #D8EDCC;
