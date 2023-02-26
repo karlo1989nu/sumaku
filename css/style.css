@@ -4,6 +4,7 @@
 }
 
 body {
+    display: grid;
     font-family: 'Bungee Hairline';
     flex-direction: column;
     background-color: #542F54;
@@ -36,37 +37,6 @@ img {
     object-fit: cover;
 }
 
-.body_nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-}
-
-.navigation-item {
-    margin: 15px;
-    border: 2px solid #8A8CA1;
-    border-radius: 25%;
-}
-
-.navigation-item:hover {
-    background-color: #425438;
-    border: 2px solid #A17A6A;
-    border-radius: 25%;
-    cursor: pointer;
-}
-
-li {
-    display: list-item;
-    text-align: center;
-    color: #D8EDCC;
-}
-
-
-
-a:hover {
-    color: #8A8CA1;
-}
-
 .am_container {
     width: 100%;
     display: grid;
@@ -92,53 +62,12 @@ a:hover {
     text-align: center;
 }
 
-#up {
-    margin-left: auto;
-    border: 0px solid #8A8CA1;
-    border-radius: 15%;
-    width: 30px;
-    height: auto;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.contactli {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    align-items: center;
-    margin: 30px;
-}
-
-#projects img {
-    justify-content: center;
-    max-width: 100%;
-    height: auto;
-}
-
-.skillss {
-    display: flex;
-    justify-content: center;
-}
-
 .picture-home {
     margin: 15px;
     border: 2px solid #8A8CA1;
     border-radius: 25%;
     height: 10em;
     width: 10em;
-}
-
-.bogi-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    margin: auto;
-}
-
-.nav_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 .bogi-content-grid {
@@ -174,4 +103,12 @@ a:hover {
 .crr_txt {
     color: #542F54;
     font-weight: bold;
+}
+
+/* @media */
+
+@media (max-width: 767px) {
+    .am_container {
+        grid-template-columns: 1fr;
+    }
 }
