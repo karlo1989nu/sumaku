@@ -58,9 +58,9 @@ if (ingreso) {
    }
    
    if (newCatage >= 1) {
-      alert("Your slave is " + newCatage + " cat-years old, please proceed to choose your desired products.")
+      alert("Your slave is " + Math.round(newCatage) + " cat-years old, please proceed to choose your desired products.")
    } else {
-      alert("Your useless slave can't buy you catnip because its age is " + newCatage + " cat-years old, we recommend to trash it and find another one that can serve you better")
+      alert("Your useless slave can't buy you catnip because its age is " + Math.round(newCatage) + " cat-years old, we recommend to trash it and find another one that can serve you better")
    }
 }
 
