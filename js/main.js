@@ -1,10 +1,9 @@
 // Programa de bienvenida al sitio web de BoGi, la Catnip lord
 /*
 Este programa va dará evaluará si:
- 1. al usuario le gustan los gatos
+ 1. al esclavo le gustan los gatos
  2. el usuario cuenta con suficiente edad gato para comprar nuestros productos
  3. el usuario tiene uso de razón y se arrepiente de no gustarle los gatos después de negarlo max dos veces
- 
 */
 
 let enteredName = prompt('Enter your name:')
@@ -47,8 +46,8 @@ console.log(enteredAge);
 alert("Welcome to our meownder world, " + enteredName + ". Here you'll find all the Catnip related products you need.");
 console.log(alert("According to Meowngarian regulations, only Meowngarian Kittizens over 1 cat-years old are allowed to buy and consume catnip therefore, in order to buy in our website, we'll convert your slave's age to cat age."));
 
-if (ingreso) {
-   
+function catAge() {
+
    newCatage = 0;
 
    if (enteredAge < 40) {
@@ -56,12 +55,16 @@ if (ingreso) {
    } else {
       newCatage = ((enteredAge - 40) / 4) + 6;
    }
-   
+
+}
+
+catAge(enteredAge)
+
+if (ingreso) {
+
    if (newCatage >= 1) {
       alert("Your slave is " + Math.round(newCatage) + " cat-years old, please proceed to choose your desired products.")
    } else {
       alert("Your useless slave can't buy you catnip because its age is " + Math.round(newCatage) + " cat-years old, we recommend to trash it and find another one that can serve you better")
    }
 }
-
-
