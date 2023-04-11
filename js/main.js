@@ -78,7 +78,7 @@ const productsServices = [
 let prodSerNew = []
 
 for (let i in productsServices) {
-   i += "_Catnip: " + productsServices[i].productname + " Price $" + productsServices[i].price + " Stock: " + productsServices[i].stock
+   i += "_Catnip: " + productsServices[i].productname + " Stock: " + productsServices[i].stock
    prodSerNew.push(i);
 }
 
