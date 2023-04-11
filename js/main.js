@@ -17,16 +17,16 @@ if (likeCats === 'yes' || likeCats === 'Yes') {
    ingreso = true;
 
 } else if (likeCats === 'no' || likeCats === 'No') {
-      let likeCats1 = prompt("We can't accept 'No/no' as the answer for this question, " + enteredName + ". Please try one more time. Do you like cats?: (yes/no)")
-      console.log(likeCats1);
-      for (let i = 0; i < 3; i++) {
+   let likeCats1 = prompt("We can't accept 'No/no' as the answer for this question, " + enteredName + ". Please try one more time. Do you like cats?: (yes/no)")
+   console.log(likeCats1);
+   for (let i = 0; i < 3; i++) {
       if (likeCats1 === 'yes' || likeCats1 === 'Yes') {
          break
       } else if (likeCats1 === 'no' || likeCats1 === 'No') {
-            likeCats1 = prompt('Please try one more time, do you like cats:')
-         }
+         likeCats1 = prompt('Please try one more time, do you like cats:')
       }
    }
+}
 
 
 let enteredAge = parseInt(prompt("Enter your slave's age here:"))
@@ -59,4 +59,38 @@ if (ingreso) {
 }
 
 /* II Entrega => A partir de esta línea estaré escribiendo el código perteneciente a la segunda entrega de la comisión #52125. */
+
+// Lista de productos de la Catnip tienda (aray)
+
+const productsServices = [
+   { id: 101, stock: 112, productname: "Meowloha", price: 500, img: "img1.jpg", description: " Buy it now and taste heaven" },
+   { id: 102, stock: 123, productname: "Meowabonga", price: 1000, img: "img2.jpg", description: " Try this to know the glory" },
+   { id: 103, stock: 134, productname: "Meowrale", price: 1500, img: "img3.jpg", description: "This is a sentence to paradise with tequila" },
+   { id: 104, stock: 145, productname: "Meowla Pirola", price: 2000, img: "img4.jpg", description: "Don't forget your mate with this" },
+   { id: 105, stock: 156, productname: "Meownda la osa", price: 2500, img: "img5.jpg", description: "Available at Moe's" },
+   { id: 106, stock: 167, productname: "Meow", price: 3000, img: "img6.jpg", description: "Meow" },
+   { id: 107, stock: 178, productname: "Meowlala", price: 3500, img: "img7.jpg", description: "Bring your own bagette" },
+   { id: 108, stock: 189, productname: "Meowmamia", price: 4000, img: "img8.jpg", description: "Bring your pizza" },
+   { id: 109, stock: 190, productname: "Meowbye", price: 4500, img: "img9.jpg", description: "Hahahahahahahaha" },
+   { id: 110, stock: 200, productname: "Meowboy", price: 5000, img: "img10.jpg", description: "Meowidy meow" },
+]
+
+let prodSerNew = []
+
+for (let i in productsServices) {
+   i += "_Catnip: " + productsServices[i].productname + " Price $" + productsServices[i].price + " Stock: " + productsServices[i].stock
+   prodSerNew.push(i);
+}
+
+alert("This is our list of products: " + prodSerNew)
+
+let productsearch = prompt("Please type your desired product from the list")
+
+const findProduct = productsServices.find((el) => el.productname == productsearch)
+
+/* Test: console.log(findProduct);*/
+
+alert("Your selected product is '" + findProduct.productname + "' whose price is $" + findProduct.price + ". " + findProduct.description + ". If this information is correct please proceed to pay your purchase.")
+
+
 
