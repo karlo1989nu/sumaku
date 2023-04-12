@@ -92,5 +92,8 @@ const findProduct = productsServices.find((el) => el.productname == productsearc
 
 alert("Your selected product is '" + findProduct.productname + "' whose price is $" + findProduct.price + ". " + findProduct.description + ". If this information is correct please proceed to pay your purchase.")
 
+const totalStock = productsServices.reduce((acc,el)=>{
+   return acc + el.stock
+},0)
 
-
+console.log(totalStock);
