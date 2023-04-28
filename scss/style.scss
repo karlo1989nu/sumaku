@@ -1,0 +1,102 @@
+$color_1: #D8EDCC;
+$color_2: #542F54;
+$font-family_1: 'Bungee Hairline';
+$background-color_1: #542F54;
+$background-color_2: #D8EDCC;
+
+/* Carousel CSS */
+/* @media */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: grid;
+	font-family: $font-family_1;
+	flex-direction: column;
+	background-color: $background-color_1;
+	color: $color_1;
+	font-weight: bold;
+}
+.letter_color {
+	color: $color_1;
+}
+.nav_hamb {
+	background-color: $background-color_1;
+	color: $color_1;
+}
+.logo {
+	margin: 20px;
+	justify-content: center;
+	max-width: 150px;
+	max-height: 150px;
+	height: auto;
+	border-radius: 15%;
+	border: none;
+}
+img {
+	border-radius: 15%;
+	border: 2px solid #8A8CA1;
+	object-fit: cover;
+}
+.am_container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+.am_pic {
+	width: 100%;
+	height: 100%;
+}
+.am_txt {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+.am_photos {
+	margin: 1rem;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.picture-home {
+	margin: 15px;
+	border: 2px solid #8A8CA1;
+	border-radius: 25%;
+	height: 10em;
+	width: 10em;
+}
+.bogi-content-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.bogi-content-grid-img {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.crr_but {
+	background-color: $background-color_1;
+	color: $color_1;
+	border: 2px solid #8A8CA1;
+	border-radius: 25%;
+	&:hover {
+		background-color: $background-color_2;
+		color: $color_2;
+		font-weight: bold;
+	}
+}
+.but_border {
+	border: 2px solid #8A8CA1;
+	border-radius: 25%;
+}
+.crr_txt {
+	color: $color_2;
+	font-weight: bold;
+}
+@media (max-width: 767px) {
+	.am_container {
+		grid-template-columns: 1fr;
+	}
+}
+
