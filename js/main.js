@@ -82,24 +82,65 @@ for (let i in productsServices) {
    prodSerNew.push(i);
 }
 
-alert("This is our list of products: " + prodSerNew)
+// alert("This is our list of products: " + prodSerNew)
 
-let productsearch = prompt("Please type your desired product from the list")
+// let productsearch = prompt("Please type your desired product from the list")
 
-const findProduct = productsServices.find((el) => el.productname == productsearch)
+//const findProduct = productsServices.find((el) => el.productname == productsearch)
 
 /* Test: console.log(findProduct);*/
-if (findProduct) {
-   alert(`Your selected product is ${findProduct.productname} whose price is $${findProduct.price}. ${findProduct.description}. If this information is correct please proceed to pay your purchase.`)   
-} else {
-   alert("The product selected isn't available.")  
-}
-const totalStock = productsServices.reduce((acc,el)=>{
+// if (findProduct) {
+//    alert(`Your selected product is ${findProduct.productname} whose price is $${findProduct.price}. ${findProduct.description}. If this information is correct please proceed to pay your purchase.`)   
+// } else {
+//    alert("The product selected isn't available.")  
+// }
+const totalStock = productsServices.reduce((acc, el) => {
    return acc + el.stock
-},0)
+}, 0)
 
 console.log(totalStock);
-
-
 console.dir(document.body)
 console.dir(document.head)
+
+/*III Entrega => En esta entrega construí la página STORE en la que estaré publicando una lista dinámica
+de productos y ya no por medio de alert.*/
+
+/*let prodStr = []
+
+for (let i in productsServices) {
+   i += productsServices[i].productname; productsServices[i].price; productsServices[i].description; productsServices[i].stock
+   prodStr.push(i);
+}*/
+
+let btnGet = document.querySelector('#bttnStr')
+let myTable = document.querySelector('#tableStr')
+
+let headers = ['Name', 'Price', 'Description', 'Stock'];
+
+btnGet.addEventListener('click', () => {
+   let table = document.createElement('table');
+   let headerRow = document.createElement('tr');
+
+   headers.forEach(headerText => {
+      let header = document.createElement('th');
+      let textNode = document.createTextNode(headerText);
+      header.appendChild(textNode);
+      headerRow.appendChild(header);
+   });
+
+   table.appendChild(headerRow);
+
+   productsServices.forEach(prod => {
+      let row = document.createElement('tr');
+
+      Object.values(prod).forEach(text => {
+         let cell = document.createElement('td');
+         let textNode = document.createTextNode(text);
+         cell.appendChild(textNode);
+         row.appendChild(cell);
+      })
+      table.appendChild(row)
+   });
+
+   myTable.appendChild(table);
+});
