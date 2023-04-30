@@ -10,6 +10,19 @@ let enteredName = prompt('Enter your name:')
 let likeCats = prompt('Do you like cats?: (yes/no)')
 let ingreso = false
 
+const productsServices = [
+   { id: 101, stock: 112, productname: "Meowloha", price: 500, img: "img1.jpg", description: " Buy it now and taste heaven" },
+   { id: 102, stock: 123, productname: "Meowabonga", price: 1000, img: "img2.jpg", description: " Try this to know the glory" },
+   { id: 103, stock: 134, productname: "Meowrale", price: 1500, img: "img3.jpg", description: "This is a sentence to paradise with tequila" },
+   { id: 104, stock: 145, productname: "Meowla Pirola", price: 2000, img: "img4.jpg", description: "Don't forget your mate with this" },
+   { id: 105, stock: 156, productname: "Meownda la osa", price: 2500, img: "img5.jpg", description: "Available at Moe's" },
+   { id: 106, stock: 167, productname: "Meow", price: 3000, img: "img6.jpg", description: "Meow" },
+   { id: 107, stock: 178, productname: "Meowlala", price: 3500, img: "img7.jpg", description: "Bring your own bagette" },
+   { id: 108, stock: 189, productname: "Meowmamia", price: 4000, img: "img8.jpg", description: "Bring your pizza" },
+   { id: 109, stock: 190, productname: "Meowbye", price: 4500, img: "img9.jpg", description: "Hahahahahahahaha" },
+   { id: 110, stock: 200, productname: "Meowboy", price: 5000, img: "img10.jpg", description: "Meowidy meow" },
+]
+
 console.log(likeCats)
 console.log(enteredName);
 
@@ -35,7 +48,7 @@ console.log(enteredAge);
 alert("Welcome to our meownder world, " + enteredName + ". Here you'll find all the Catnip related products you need.");
 alert("According to Meowngarian regulations, only Meowngarian Kittizens over 1 cat-years old are allowed to buy and consume catnip therefore, in order to buy in our website, we'll convert your slave's age to cat age.")
 
-newCatage = 0;
+let newCatage = 0;
 
 function catAge() {
 
@@ -62,19 +75,6 @@ if (ingreso) {
 
 // Lista de productos de la Catnip tienda (aray)
 
-const productsServices = [
-   { id: 101, stock: 112, productname: "Meowloha", price: 500, img: "img1.jpg", description: " Buy it now and taste heaven" },
-   { id: 102, stock: 123, productname: "Meowabonga", price: 1000, img: "img2.jpg", description: " Try this to know the glory" },
-   { id: 103, stock: 134, productname: "Meowrale", price: 1500, img: "img3.jpg", description: "This is a sentence to paradise with tequila" },
-   { id: 104, stock: 145, productname: "Meowla Pirola", price: 2000, img: "img4.jpg", description: "Don't forget your mate with this" },
-   { id: 105, stock: 156, productname: "Meownda la osa", price: 2500, img: "img5.jpg", description: "Available at Moe's" },
-   { id: 106, stock: 167, productname: "Meow", price: 3000, img: "img6.jpg", description: "Meow" },
-   { id: 107, stock: 178, productname: "Meowlala", price: 3500, img: "img7.jpg", description: "Bring your own bagette" },
-   { id: 108, stock: 189, productname: "Meowmamia", price: 4000, img: "img8.jpg", description: "Bring your pizza" },
-   { id: 109, stock: 190, productname: "Meowbye", price: 4500, img: "img9.jpg", description: "Hahahahahahahaha" },
-   { id: 110, stock: 200, productname: "Meowboy", price: 5000, img: "img10.jpg", description: "Meowidy meow" },
-]
-
 let prodSerNew = []
 
 for (let i in productsServices) {
@@ -89,11 +89,17 @@ let productsearch = prompt("Please type your desired product from the list")
 const findProduct = productsServices.find((el) => el.productname == productsearch)
 
 /* Test: console.log(findProduct);*/
-
-alert("Your selected product is '" + findProduct.productname + "' whose price is $" + findProduct.price + ". " + findProduct.description + ". If this information is correct please proceed to pay your purchase.")
-
+if (findProduct) {
+   alert(`Your selected product is ${findProduct.productname} whose price is $${findProduct.price}. ${findProduct.description}. If this information is correct please proceed to pay your purchase.`)   
+} else {
+   alert("The product selected isn't available.")  
+}
 const totalStock = productsServices.reduce((acc,el)=>{
    return acc + el.stock
 },0)
 
 console.log(totalStock);
+
+
+console.dir(document.body)
+console.dir(document.head)
