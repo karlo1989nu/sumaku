@@ -1,0 +1,82 @@
+[
+    {
+        "id": 101,
+        "stock": 112,
+        "productname": "Meowloha",
+        "price": 500,
+        "img": "../images/bogi.1.jpg",
+        "description": " Buy it now and taste heaven"
+    },
+    {
+        "id": 102,
+        "stock": 123,
+        "productname": "Meowabonga",
+        "price": 1000,
+        "img": "../images/bogi.2.jpg",
+        "description": " Try this to know the glory"
+    },
+    {
+        "id": 103,
+        "stock": 134,
+        "productname": "Meowrale",
+        "price": 1500,
+        "img": "../images/bogi.3.jpg",
+        "description": "This is a sentence to paradise with tequila"
+    },
+    {
+        "id": 104,
+        "stock": 145,
+        "productname": "Meowla Pirola",
+        "price": 2000,
+        "img": "../images/kuki.1.webp",
+        "description": "Don't forget your mate with this"
+    },
+    {
+        "id": 105,
+        "stock": 156,
+        "productname": "Meownda la osa",
+        "price": 2500,
+        "img": "../images/kuki.2.webp",
+        "description": "Available at Moe's"
+    },
+    {
+        "id": 106,
+        "stock": 167,
+        "productname": "Meow",
+        "price": 3000,
+        "img": "../images/mao.1.webp",
+        "description": "Meow"
+    },
+    {
+        "id": 107,
+        "stock": 178,
+        "productname": "Meowlala",
+        "price": 3500,
+        "img": "../images/mao.2.webp",
+        "description": "Bring your own bagette"
+    },
+    {
+        "id": 108,
+        "stock": 189,
+        "productname": "Meowmamia",
+        "price": 4000,
+        "img": "../images/suri.3.jpg",
+        "description": "Bring your pizza"
+    },
+    {
+        "id": 109,
+        "stock": 190,
+        "productname": "Meowbye",
+        "price": 4500,
+        "img": "../images/suri.4.webp",
+        "description": "Hahahahahahahaha"
+    },
+    {
+        "id": 110,
+        "stock": 200,
+        "productname": "Meowboy",
+        "price": 5000,
+        "img": "../images/sumaku.1.jpg",
+        "description": "Meowidy meow"
+    }
+]

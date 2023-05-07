@@ -6,7 +6,7 @@ Este programa va dará evaluará si:
  3. el usuario tiene uso de razón y se arrepiente de no gustarle los gatos después de negarlo max dos veces
 */
 
-let enteredName = prompt('Enter your name:')
+/*let enteredName = prompt('Enter your name:')
 let likeCats = prompt('Do you like cats?: (yes/no)')
 let ingreso = false
 
@@ -39,6 +39,8 @@ if (likeCats === 'yes' || likeCats === 'Yes') {
          likeCats1 = prompt('Please try one more time, do you like cats:')
       }
    }
+} else {
+   alert("You can only enter 'Yes', 'yes', 'No', 'no'")
 }
 
 
@@ -69,78 +71,121 @@ if (ingreso) {
    } else {
       alert("Your useless slave can't buy you catnip because its age is " + Math.round(newCatage) + " cat-years old, we recommend to trash it and find another one that can serve you better")
    }
-}
+}*/
 
 /* II Entrega => A partir de esta línea estaré escribiendo el código perteneciente a la segunda entrega de la comisión #52125. */
 
 // Lista de productos de la Catnip tienda (aray)
 
-let prodSerNew = []
+/*let prodSerNew = []
 
 for (let i in productsServices) {
    i += "_Catnip: " + productsServices[i].productname + " Stock: " + productsServices[i].stock
    prodSerNew.push(i);
 }
 
-// alert("This is our list of products: " + prodSerNew)
+ alert("This is our list of products: " + prodSerNew)
 
-// let productsearch = prompt("Please type your desired product from the list")
+ let productsearch = prompt("Please type your desired product from the list")
 
-//const findProduct = productsServices.find((el) => el.productname == productsearch)
+const findProduct = productsServices.find((el) => el.productname == productsearch)
 
-/* Test: console.log(findProduct);*/
-// if (findProduct) {
-//    alert(`Your selected product is ${findProduct.productname} whose price is $${findProduct.price}. ${findProduct.description}. If this information is correct please proceed to pay your purchase.`)   
-// } else {
-//    alert("The product selected isn't available.")  
-// }
+ Test: console.log(findProduct);
+ if (findProduct) {
+    alert(`Your selected product is ${findProduct.productname} whose price is $${findProduct.price}. ${findProduct.description}. If this information is correct please proceed to pay your purchase.`)   
+ } else {
+    alert("The product selected isn't available.")  
+ }
 const totalStock = productsServices.reduce((acc, el) => {
    return acc + el.stock
 }, 0)
 
 console.log(totalStock);
 console.dir(document.body)
-console.dir(document.head)
+console.dir(document.head)*/
 
 /*III Entrega => En esta entrega construí la página STORE en la que estaré publicando una lista dinámica
 de productos y ya no por medio de alert.*/
+const cards = document.getElementById('cards')
+const items = document.getElementById('items')
+const footer = document.getElementById('footer')
+const templateCard = document.getElementById('template-card').content
+const fragment = document.createDocumentFragment()
+const templateFooter = document.getElementById('template-footer').content
+const templateCarrito = document.getElementById('template-carrito').content
 
-/*let prodStr = []
+let cart  = {}
 
-for (let i in productsServices) {
-   i += productsServices[i].productname; productsServices[i].price; productsServices[i].description; productsServices[i].stock
-   prodStr.push(i);
-}*/
+document.addEventListener('DOMContentLoaded', () => {
+   fetchData()
+})
 
-let btnGet = document.querySelector('#bttnStr')
-let myTable = document.querySelector('#tableStr')
+cards.addEventListener('click', e => {
+   addCarrito(e)
+})
 
-let headers = ['Name', 'Price', 'Description', 'Stock'];
+const fetchData = async () => {
+   try {
+      const res = await fetch('../json/api.json')
+      const data = await res.json()
+      //console.log(data);
+      printCard(data)
+   } catch (error) {
+      console.log(error);
+   }
+}
 
-btnGet.addEventListener('click', () => {
-   let table = document.createElement('table');
-   let headerRow = document.createElement('tr');
+const printCard = data => {
+   data.forEach( producto => {
+      templateCard.querySelector('h5').textContent = producto.productname
+      templateCard.querySelector('p').textContent = producto.price
+      templateCard.querySelector('img').setAttribute("src", producto.img)
+      templateCard.querySelector('.btn').dataset.id = producto.id
 
-   headers.forEach(headerText => {
-      let header = document.createElement('th');
-      let textNode = document.createTextNode(headerText);
-      header.appendChild(textNode);
-      headerRow.appendChild(header);
+      const clone = templateCard.cloneNode(true)
+      fragment.appendChild(clone)
    });
+   cards.appendChild(fragment)
+}
 
-   table.appendChild(headerRow);
+const addCarrito = e => {
+   // console.log(e.target);
+   // console.log(e.target.classList.contains('btn'));
+   if (e.target.classList.contains('btn')) {
+      setCart(e.target.parentElement)
+   }
+   e.stopPropagation()
+}
 
-   productsServices.forEach(prod => {
-      let row = document.createElement('tr');
+const setCart = objeto => {
+   //console.log(objeto);
+   const producto = {
+      id: objeto.querySelector('.btn').dataset.id,
+      productname: objeto.querySelector('h5').textContent,
+      price: objeto.querySelector('p').textContent,
+      cantidad: 1
+   }
 
-      Object.values(prod).forEach(text => {
-         let cell = document.createElement('td');
-         let textNode = document.createTextNode(text);
-         cell.appendChild(textNode);
-         row.appendChild(cell);
-      })
-      table.appendChild(row)
-   });
+   if (cart.hasOwnProperty(producto.id)) {
+      producto.cantidad = cart[producto.id].cantidad + 1
+   }
 
-   myTable.appendChild(table);
-});
+   cart[producto.id] = {...producto}
+   pintarCarrito()
+}
+
+const pintarCarrito = () => {
+   console.log(cart)
+   Object.values(cart).forEach(producto => {
+      templateCarrito.querySelector('th').textContent = producto.id
+      templateCarrito.querySelectorAll('td')[0].textContent = producto.productname
+      templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+      templateCarrito.querySelector('.btn-info').dataset.id = producto.id
+      templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
+      templateCarrito.querySelector('span').textContent = producto.cantidad * producto.price
+
+      const clone = templateCarrito.cloneNode(true)
+      fragment.appendChild(clone)
+   })
+   items.appendChild(fragment)
+}
