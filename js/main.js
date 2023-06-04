@@ -122,34 +122,36 @@ const pintarFooter = () => {
   const btnVaciar = document.getElementById("vaciar-carrito");
   btnVaciar.addEventListener("click", () => {
     cart = {};
-    printCard();
+    pintarCarrito();
   });
 
   const btnComprar = document.getElementById("comprar-carrito");
-  btnVaciar.addEventListener("click", () => {
+  btnComprar.addEventListener("click", () => {
     cart = {};
-    printCard();
+    pintarCarrito();
+    confirm('Compra exitosa, vuelve pronto.')
   });
 
-  const btnAccion = (e) => {
-    console.log(e.target);
-    if (e.target.classList.contains("btn-info")) {
-      cart[e.target.dataset.id];
-      const producto = cart[e.target.dataset.id];
-      producto.cantidad++;
-      cart[e.target.dataset.id] = { ...producto };
+};
 
-      printCard();
-    }
+const btnAccion = (e) => {
+  console.log(e.target);
+  if (e.target.classList.contains("btn-info")) {
+    cart[e.target.dataset.id];
+    const producto = cart[e.target.dataset.id];
+    producto.cantidad++;
+    cart[e.target.dataset.id] = { ...producto };
 
-    if (e.target.classList.contains("btn-danger")) {
-      const producto = cart[e.target.dataset.id];
-      producto.cantidad--;
-      if (producto.cantidad === 0) {
-        delete cart[e.target.dataset.id];
-      }
-      printCard();
+    pintarCarrito();
+  }
+
+  if (e.target.classList.contains("btn-danger")) {
+    const producto = cart[e.target.dataset.id];
+    producto.cantidad--;
+    if (producto.cantidad === 0) {
+      delete cart[e.target.dataset.id];
     }
-    e.stopPropagation();
-  };
+    pintarCarrito();
+  }
+  e.stopPropagation();
 };
